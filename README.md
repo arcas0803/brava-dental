@@ -21,6 +21,17 @@ El reto era crear una landing contemporánea y expresiva sin comprometer la clar
 | Publicación | GitHub Pages con despliegue automatizado mediante GitHub Actions |
 | Calidad | Revisión visual y análisis de rendimiento y buenas prácticas |
 
+## Resultados de la publicación
+
+| Lighthouse · tres ejecuciones por perfil | Móvil | Escritorio |
+|---|---|---|
+| Rendimiento | 100 | 100 |
+| Buenas prácticas | 100 | 100 |
+| Accesibilidad automatizada | 100 | 100 |
+| LCP mediano | 1,51 s | 0,33 s |
+
+Evaluación del 13/10/2026 sobre la landing publicada. Son métricas de laboratorio, no garantías de experiencia para todo usuario ni certificación WCAG. [Método, rangos y limitaciones](docs/PERFORMANCE.md).
+
 ## Decisiones que importan
 
 - **La foto conserva su proporción.** No se recorta el rostro ni se sitúa texto sobre la imagen.

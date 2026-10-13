@@ -1,0 +1,132 @@
+{
+  "url": "https://arcas0803.github.io/brava-dental/",
+  "measuredAt": "2026-10-13T14:35:01.753Z",
+  "sourceRevision": "b4dba0d199c8af531be99e05b1cdd615d4eb3743",
+  "lighthouseVersion": "13.5.0",
+  "chromeVersion": "155.0.0.0",
+  "runsPerProfile": 3,
+  "method": "Lighthouse simulated throttling; default mobile/desktop configurations; local temporary Chrome profile against public HTTPS URL",
+  "profiles": {
+    "mobile": {
+      "scores": {
+        "performance": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "accessibility": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "best-practices": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "seo": {
+          "median": 63,
+          "min": 63,
+          "max": 63
+        }
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "median": 906.4153,
+          "min": 905.5004,
+          "max": 1056.355
+        },
+        "largest-contentful-paint": {
+          "median": 1506.4153000000001,
+          "min": 1505.5004,
+          "max": 1656.355
+        },
+        "cumulative-layout-shift": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "total-blocking-time": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "speed-index": {
+          "median": 906.4153,
+          "min": 905.5004,
+          "max": 2224.521563998871
+        }
+      }
+    },
+    "desktop": {
+      "scores": {
+        "performance": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "accessibility": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "best-practices": {
+          "median": 100,
+          "min": 100,
+          "max": 100
+        },
+        "seo": {
+          "median": 63,
+          "min": 63,
+          "max": 63
+        }
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "median": 245.8133,
+          "min": 245.2126,
+          "max": 246.1548
+        },
+        "largest-contentful-paint": {
+          "median": 325.8133,
+          "min": 325.2126,
+          "max": 326.1548
+        },
+        "cumulative-layout-shift": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "total-blocking-time": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "speed-index": {
+          "median": 245.8133,
+          "min": 245.2126,
+          "max": 246.1548
+        }
+      }
+    }
+  },
+  "mobileTransfer": {
+    "public-pages": {
+      "medianBytes": 292479,
+      "minBytes": 292477,
+      "maxBytes": 292563
+    },
+    "public-pages-optimized": {
+      "medianBytes": 145615,
+      "minBytes": 145615,
+      "maxBytes": 145699
+    }
+  },
+  "limitations": [
+    "Lab data, not field CWV",
+    "TBT is not INP",
+    "Noindex intentional for fictional demo",
+    "Automated accessibility score is not WCAG certification",
+    "Case-study route functionally checked but not included in these Lighthouse measurements"
+  ]
+}
