@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import preview from '../../public/case-study/desktop.webp';
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
@@ -10,7 +12,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 <h1>Una sonrisa.<br/><span>Una identidad.</span></h1>
 <p class="case-deck">BRAVA es un concepto dental que combina una dirección visual expresiva con una experiencia cercana, clara y ligera.</p>
 <div class="case-facts"><div><span>Proyecto</span>Portfolio · Clínica ficticia</div><div><span>Trabajo</span>Diseño e implementación frontend</div><div><span>Tecnología</span>Astro · TypeScript · CSS</div></div>
-<img class="case-preview" src={`${base}case-study/desktop.webp`} width="1425" height="990" alt="Portada de BRAVA: titular lima, retrato completo y tratamientos" fetchpriority="high"/>
+<Image class="case-preview" src={preview} widths={[400,800,1425]} sizes="(max-width:600px) calc(100vw - 40px), (max-width:1440px) calc(100vw - 104px), 1340px" format="webp" quality={82} alt="Portada de BRAVA: titular lima, retrato completo y tratamientos" loading="lazy"/>
 <div class="case-story"><section><span class="case-number">01 / EL RETO</span><h2>Personalidad sin perder claridad.</h2><p>Una landing dental puede transmitir confianza y tener una voz propia. El reto fue crear una composición contemporánea, manteniendo la fotografía completa, el contenido legible y una llamada a la acción fácil de encontrar.</p></section><section><span class="case-number">02 / LA DIRECCIÓN</span><h2>El contraste marca el ritmo.</h2><p>Tinta verde, lima y superficies claras forman un sistema que conecta con la imagen de campaña. Los tratamientos usan una retícula asimétrica, mientras que la primera visita y las preguntas frecuentes ayudan a decidir con calma.</p></section><section><span class="case-number">03 / EL DETALLE</span><h2>El formulario también se diseña.</h2><p>Los errores tienen espacio reservado y no desplazan los campos. El foco se integra en el control; la validación señala qué corregir y conserva la información. La confirmación explica con claridad que se trata de una demo.</p></section><section><span class="case-number">04 / LA IMPLEMENTACIÓN</span><h2>Una experiencia ligera.</h2><p>Astro entrega HTML estático. CSS y pequeñas interacciones en TypeScript resuelven la navegación, las dudas y el formulario, sin hidratar toda la página ni añadir dependencias de interfaz.</p></section></div>
 <div class="case-closing"><h2>Diseño que se puede<br/>explorar y comprobar.</h2><p>La demo no recoge datos ni representa una clínica real. Las métricas de laboratorio y las limitaciones se documentan en el repositorio.</p><a class="button" href={base}>Ver la landing <Icon name="diagonal"/></a><a class="case-repo" href="https://github.com/arcas0803/brava-dental">Código y evaluación en GitHub <Icon name="arrow" size={18}/></a></div>
 </main><footer class="case-footer wrap"><a href="https://github.com/arcas0803">Álvaro Arcas · GitHub</a><span>BRAVA · Proyecto de portfolio</span></footer>
