@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+---
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="#" aria-label="brava dental studio, inicio" translate="no"><span class="brand-word">brava<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 0 20 11 32 8 24 16 32 24 20 21 16 32 12 21 0 24 8 16 0 8 12 11Z" fill="currentColor"/></svg></span> <span class="brand-caption">dental studio</span></a>
+<nav class="desktop-nav" aria-label="Navegación principal"><a href="#filosofia">El espíritu Brava</a><a href="#tratamientos">Tratamientos</a><a href="#preguntas">Tus dudas</a></nav>
+<a class="button button-small header-cta" href="#cita">Pide tu primera cita <Icon name="diagonal" size={18}/></a>
+<button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav"><Icon name="menu"/></button>
+</div>
+<nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil" hidden><a href="#filosofia">El espíritu Brava</a><a href="#tratamientos">Tratamientos</a><a href="#preguntas">Tus dudas</a><a href="#cita">Pide tu primera cita</a></nav>
+</header>
+<script>
+const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+const menu = document.querySelector<HTMLElement>('#mobile-nav');
+function closeMenu() { if (toggle && menu) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Abrir menú'); menu.hidden = true; } }
+toggle?.addEventListener('click', () => { if (!menu) return; const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú'); menu.hidden = !open; });
+menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
+window.matchMedia('(min-width: 901px)').addEventListener('change', closeMenu);
+</script>

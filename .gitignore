@@ -1,0 +1,36 @@
+# Build and dependencies
+node_modules/
+dist/
+.astro/
+coverage/
+*.log
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
+
+# Agent instructions and skill packs (never publish)
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+SKILL.md
+.agents/
+.codex/
+.claude/
+.cursor/
+skills/
+**/skills/
+*skill-pack*
+modern-landing-factory*/
+modern-landing-factory*.zip
+
+# Working screenshots, raw audits and backups
+preview/
+audits/
+test-results*/
+playwright-report/
+*.zip

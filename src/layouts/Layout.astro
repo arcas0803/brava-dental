@@ -1,0 +1,26 @@
+---
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/manrope';
+import '../styles/global.css';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+import displayFont from '@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2?url';
+import bodyFont from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
+const { title = "BRAVA Dental Studio · Clínica dental en Madrid — Demo", description = "BRAVA Dental Studio. Un concepto de clínica dental en Madrid donde cuidar tu sonrisa empieza por escucharte." } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#f7f8f2"/>
+<meta name="description" content={description}/>
+<meta name="robots" content="noindex, follow"/>
+<meta property="og:title" content="BRAVA Dental Studio — Una sonrisa muy tuya"/>
+<meta property="og:description" content="Odontología con cabeza. Cuidado con corazón. Un concepto de clínica dental diferente."/>
+<meta property="og:type" content="website"/>
+<link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="preload" href={bodyFont} as="font" type="font/woff2" crossorigin="anonymous"/>
+<link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`}/>
+<title>{title}</title>
+</head>
+<body><a class="skip-link" href="#contenido">Saltar al contenido</a><slot/></body>
+</html>
